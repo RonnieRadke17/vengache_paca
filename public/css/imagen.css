@@ -1,0 +1,15 @@
+body{
+    opacity: 100%;
+    background: linear-gradient(rgb(5, 7,12,0.75),rgb(5, 7,12,0.75)),
+    url("https://s3-alpha-sig.figma.com/img/8292/5ec0/c631225021bb1b74db40154bd78f0da6?Expires=1701043200&Signature=m8y827jzE4QzTdU8me~-Vx8egTjni0kSfNSPzjOQdtkERqJv32znguzEGbD1ymq38lvXWmXEc2uTGH94w68sK~mn1ldf81vBQQZqD1EhptVGaJoWSWOh2dgndgigKigwprbI0ni8JSL6K8u0ksI2qsJV8W87Wy74CbBefac3l2HO4EvblfMiXJ195bOU1ZxjfzflNgxnBBwQjHZZmNq7ZmW-hOozRo2RAu3BqAfzujXiEvkrUFbnAauWVosyaEsRAJQaZEmxsKLBoSmp1QAPnbxORAZomfeMXUmy-~SxBY5AfAOGzPj6QEqOzTWEyFGQ0OUIw1~VjoEXJwRGhHxOIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 ")
+    no-repeat center fixed;
+    background-size: cover;
+}
+
+
+    .avatar-img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+

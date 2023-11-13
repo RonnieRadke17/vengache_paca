@@ -1,18 +1,21 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GestorDescansosController;
+use App\Http\Controllers\ReservacionesController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/administrador/profile',[AdminController::class,'index']);
+
+Route::get('/descansos',[GestorDescansosController::class,'index']);
+
+
+Route::get('/reservaciones',[ReservacionesController::class,'index']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
