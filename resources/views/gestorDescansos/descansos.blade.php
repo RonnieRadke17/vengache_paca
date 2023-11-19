@@ -2,6 +2,11 @@
 @section('style1')
     {{ asset('css/imagen.css') }}
 @endsection
+@section('script1')
+    {{ asset('js/descansos.js') }}
+@endsection
+
+
 @section('content')
 <div class="container">
 <p class="text-center font-weight-bold text-white" style="font-size:2.5rem;">
@@ -9,24 +14,20 @@
 </p>
 <div class="input-group mb-3">
     <span class="input-group-text">Empleado</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="empleado">
   </div>
   
   <div class="input-group mt-3 mb-3">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
-      Dias de descanso
-    </button>
-    <ul class="dropdown-menu">
-      <li class="dropdown-item">1</li>
-      <li class="dropdown-item">2</li>
-      <li class="dropdown-item">3</li>
-      <li class="dropdown-item">4</li>
-      <li class="dropdown-item">6</li>
-      <li class="dropdown-item">7</li>
-    </ul>
+    <select class="form-select form-select" id="descanso">
+        <option value="null">Dias de descanso</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
   </div>
 <div class="btn-group">
-<a href="{{url('/trabajador')}}" class="btn btn-success">Guardar</a>
+<button class="btn btn-success" onclick="validar()">Guardar</button>    
 <a href="{{url('/trabajador')}}" class="btn btn-info">Consultar</a>
 <a href="{{url('/trabajador')}}" class="btn btn-warning">Modificar</a>
 <a href="{{url('/trabajador')}}" class="btn btn-danger">Eliminar</a>

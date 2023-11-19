@@ -2,6 +2,11 @@
 @section('style1')
     {{ asset('css/imagen.css') }}
 @endsection
+
+@section('script1')
+    {{ asset('js/reservacion.js') }}
+@endsection
+
 @section('content')
 <div class="container">
 <p class="text-center font-weight-bold text-white" style="font-size:2.5rem;">
@@ -9,27 +14,22 @@
 </p>
 <div class="input-group mb-3">
     <span class="input-group-text">Nombre</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="Name">
   </div>
   <div class="input-group mb-3">
     <span class="input-group-text">Fecha</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="fecha">
   </div>
-  <div class="input-group mt-3 mb-3">
-    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">
-      Mesas disponibles
-    </button>
-    <ul class="dropdown-menu">
-    <li class="dropdown-item">1</li>
-    <li class="dropdown-item">2</li>
-    <li class="dropdown-item">3</li>
-    <li class="dropdown-item">4</li>
-    <li class="dropdown-item">6</li>
-    <li class="dropdown-item">7</li>
-    </ul>
-  </div>
+  <select class="form-select form-select" id="categoria">
+    <option value="null">Mesas disponibles</option>
+    <option value="Deportiva">1</option>
+    <option value="Cultural">2</option>
+    <option value="Cultural">3</option>
+    <option value="Cultural">4</option>
+    <option value="Cultural">5</option>
+</select>
 <div class="btn-group">
-<a class="btn btn-success">Guardar</a>
+<a class="btn btn-success" onclick="validar()">Guardar</a>
 <a class="btn btn-info">Consultar</a>
 <a class="btn btn-warning">Modificar</a>
 <a class="btn btn-danger">Eliminar</a>
