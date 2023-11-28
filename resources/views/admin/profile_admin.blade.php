@@ -14,18 +14,34 @@
                     <h4 class="text-white">Administrador</h4>
                 </li>
                 <li class="list-group-item">
-                    <strong>Nombre:</strong> Cris David
+                    <a href="{{url('/editprofile')}}" class="btn btn-info">Actualizar datos</a>
+                </li>
+                <li class="list-group-item">
+                    <strong>Nombre:</strong> Cris
+                </li>
+                <li class="list-group-item">
+                    <strong>Apellido paterno:</strong> Cris Cruz
+                </li>
+                <li class="list-group-item">
+                    <strong>Apellido materno:</strong> Cris Garcia
                 </li>
                 <li class="list-group-item">
                     <strong>Correo electrónico:</strong> admin@example.com
                 </li>
                 <li class="list-group-item">
+                    <strong>Contraseña:</strong> ***********
+                </li>
+                <li class="list-group-item">
                     <strong>Fecha de Nacimiento:</strong> 01/01/1990
                 </li>
                 <li class="list-group-item">
-                    <strong>Contraseña:</strong> ***********
+                    <details>
+                        <summary>Borrar cuenta</summary>
+                        <center>
+                            <button type="button" class="btn btn-danger">Borrar cuenta</button>
+                        </center>
+                    </details>
                 </li>
-                
             </ul>
         </div>
     </div>

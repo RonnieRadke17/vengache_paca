@@ -54,6 +54,11 @@
                             @endif
                         @else
                         <li class="nav-item">
+                            <a class="nav-link" href="{{url('/menu')}}">
+                            Menú
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{url('/descansos')}}">
                             Gestor de descansos
                             </a>
@@ -61,6 +66,11 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/reservaciones')}}">
                             Reservaciones  
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/mesas')}}">
+                            Mesas
                             </a>
                         </li>
                         <li class="nav-item">

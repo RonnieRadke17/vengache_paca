@@ -18,6 +18,20 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+
+Route::get('/mesas', function () {
+    return view('mesas.mesas');
+});
+
+Route::get('/editprofile', function () {
+    return view('admin.edit_profile');
+});
+
+Route::get('/menu', function () {
+    return view('menu.menu');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
