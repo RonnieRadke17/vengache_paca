@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\GestorDescansosController;
 use App\Http\Controllers\ReservacionesController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MesaController;
+Route::resource('mesas',MesaController::class);
 
 Route::get('/administrador/profile',[AdminController::class,'index']);
 
@@ -19,9 +21,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/mesas', function () {
-    return view('mesas.mesas');
-});
+
 
 Route::get('/editprofile', function () {
     return view('admin.edit_profile');
