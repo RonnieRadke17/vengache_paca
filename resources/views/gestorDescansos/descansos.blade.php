@@ -19,11 +19,14 @@
   
   <div class="input-group mt-3 mb-3">
     <select class="form-select form-select" id="descanso">
-        <option value="null">Dias de descanso</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
+        <option value="null">Dia de descanso</option>
+        <option value="1">Lunes</option>
+        <option value="2">Martes</option>
+        <option value="3">Miércoles</option>
+        <option value="4">Jueves</option>
+        <option value="5">Viernes</option>
+        <option value="6">Sábado</option>
+        <option value="7">Domingo</option>
     </select>
   </div>
 <div class="btn-group">
@@ -37,22 +40,22 @@
     <thead class="thead-light">
         <tr>
             <th>Empleado</th>
-            <th>Dias de descanso</th>
+            <th>Dia de descanso</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>José Juarez</td>
-            <td>7</td>
+            <td>Lunes</td>
         </tr>
         <tr>
             
             <td>Cris David</td>
-            <td>20</td>
+            <td>Martes</td>
         </tr>
         <tr>
             <td>Juan Martinez</td>
-            <td>4</td>
+            <td>Jueves</td>
         </tr>
         </tbody>
 </table>

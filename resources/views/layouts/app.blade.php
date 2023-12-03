@@ -58,6 +58,7 @@
                             Menú
                             </a>
                         </li>
+                        @if(Auth::user()->Tipo == 'Administrador')
                         <li class="nav-item">
                             <a class="nav-link" href="{{url('/descansos')}}">
                             Gestor de descansos
@@ -78,6 +79,16 @@
                             Productos  
                             </a>
                         </li>
+                        @endif
+                        @if(Auth::user()->Tipo == 'Cliente' || Auth::user()->Tipo == 'Trabajador')
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{url('/reservaciones')}}">
+                            Reservaciones  
+                            </a>
+                        </li>
+                        @endif
+
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

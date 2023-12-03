@@ -12,9 +12,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('reservaciones', function (Blueprint $table) {
-            $table->id('ID_Reservacion');
-            $table->foreignId('ID_Cliente')->constrained('usuarios', 'ID_Usuario');
-            $table->foreignId('ID_Mesa')->constrained('mesas', 'ID_Mesa');
+            $table->id();
+            $table->foreignId('ID_Cliente')->constrained('users');
+            $table->foreignId('ID_Mesa')->constrained('mesas');
             $table->date('Fecha');
             $table->time('Hora');
             $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada']);
