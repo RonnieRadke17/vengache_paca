@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('descansos_trabajadores', function (Blueprint $table) {
-            $table->id('ID_Descanso');
+        Schema::create('descansos', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('ID_Trabajador')->constrained('users');
             $table->date('Fecha');
             // Otros campos relevantes sobre los descansos de trabajadores
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('descansos_trabajadores');
+        Schema::dropIfExists('descansos');
     }
 };

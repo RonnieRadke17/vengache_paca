@@ -6,11 +6,17 @@ use App\Http\Controllers\GestorDescansosController;
 use App\Http\Controllers\ReservacionesController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MesaController;
+use App\Http\Controllers\DescansoController;
+
+Route::resource('descansos',DescansoController::class);
+
 Route::resource('mesas',MesaController::class);
+
+
 
 Route::get('/administrador/profile',[AdminController::class,'index']);
 
-Route::get('/descansos',[GestorDescansosController::class,'index']);
+//Route::get('/descansos',[GestorDescansosController::class,'index']);
 
 Route::resource('/product',ProductController::class);
 
