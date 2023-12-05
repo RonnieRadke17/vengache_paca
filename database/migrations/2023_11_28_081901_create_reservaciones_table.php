@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('ID_Mesa')->constrained('mesas');
             $table->date('Fecha');
             $table->time('Hora');
-            $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada']);
+            $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada'])->default('Pendiente');
             // Otros campos relevantes sobre las reservaciones
             $table->timestamps();
         });

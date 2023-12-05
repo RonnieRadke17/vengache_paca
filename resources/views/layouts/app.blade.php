@@ -94,7 +94,7 @@
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{url('/administrador/profile')}}">
+                                    <a class="dropdown-item" href="{{url('/admin')}}">
                                         Perfil
                                     </a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
