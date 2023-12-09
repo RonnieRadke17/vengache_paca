@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('reservaciones', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ID_Cliente')->constrained('users');
-            $table->foreignId('ID_Mesa')->constrained('mesas');
+            $table->foreignId('ID_Cliente')->constrained('users')->onDelete('cascade');
+            $table->foreignId('ID_Mesa')->constrained('mesas')->onDelete('cascade');
             $table->date('Fecha');
             $table->time('Hora');
             $table->enum('Estado', ['Pendiente', 'Confirmada', 'Cancelada'])->default('Pendiente');

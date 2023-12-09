@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('descansos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('ID_Trabajador')->constrained('users');
+            $table->foreignId('ID_Trabajador')->constrained('users')->onDelete('cascade');
             $table->date('Fecha');
             // Otros campos relevantes sobre los descansos de trabajadores
             $table->timestamps();
