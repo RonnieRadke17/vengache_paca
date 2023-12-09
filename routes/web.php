@@ -9,6 +9,14 @@ use App\Http\Controllers\MesaController;
 use App\Http\Controllers\DescansoController;
 use App\Http\Controllers\ReservacioneController;
 
+
+// routes/web.php
+
+use App\Http\Controllers\MenuController;
+
+Route::get('/menu', [MenuController::class, 'mostrarMenu'])->name('mostrar-menu');
+
+
 Route::resource('reservaciones',ReservacioneController::class);
 
 Route::resource('descansos',DescansoController::class);
@@ -43,9 +51,9 @@ Route::get('/editprofile', function () {
     return view('admin.edit_profile');
 });
 
-Route::get('/menu', function () {
+/*Route::get('/menu', function () {
     return view('menu.menu');
-});
+});*/
 
 
 Auth::routes();
